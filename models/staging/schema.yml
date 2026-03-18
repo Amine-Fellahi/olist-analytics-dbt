@@ -9,6 +9,6 @@ sources:
       - name: customers
       - name: order_items
       - name: order_payments
-      - name: order_reviews
+      - name: order_reviews_clean
       - name: products
       - name: sellers
