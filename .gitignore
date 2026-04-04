@@ -1,0 +1,13 @@
+# dbt
+olist_analytics/target/
+olist_analytics/dbt_packages/
+olist_analytics/logs/
+
+# Logs
+logs/
+
+# Mac
+.DS_Store
+
+# Claude
+.claude/

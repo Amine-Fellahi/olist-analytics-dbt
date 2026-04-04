@@ -1,0 +1,31 @@
+[0m01:42:20.290897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040ec980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106443ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106443d90>]}
+
+
+============================== 01:42:20.295737 | daee3a0b-4285-4447-bf50-dd2af0b3af2e ==============================
+[0m01:42:20.295737 [info ] [MainThread]: Running with dbt=1.11.7
+[0m01:42:20.297004 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'empty': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'fail_fast': 'False', 'write_json': 'True', 'introspect': 'True', 'profiles_dir': '/Users/aminefellahi/.dbt', 'cache_selected_only': 'False', 'version_check': 'True', 'warn_error': 'None', 'quiet': 'False', 'debug': 'False', 'printer_width': '80', 'invocation_command': 'dbt init olist_analytics', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'no_print': 'None', 'target_path': 'None'}
+[0m01:42:20.309973 [info ] [MainThread]: Creating dbt configuration folder at /Users/aminefellahi/.dbt
+[0m01:42:20.311540 [debug] [MainThread]: Starter project path: /opt/anaconda3/lib/python3.13/site-packages/dbt/include/starter_project
+[0m01:42:20.318786 [info ] [MainThread]: 
+Your new dbt project "olist_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:42:20.319106 [info ] [MainThread]: Setting up your profile.
+[0m01:45:43.938443 [info ] [MainThread]: Profile olist_analytics written to /Users/aminefellahi/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m01:45:43.951797 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 203.73021, "process_in_blocks": "0", "process_kernel_time": 1.791114, "process_mem_max_rss": "239697920", "process_out_blocks": "0", "process_user_time": 4.752009}
+[0m01:45:43.954770 [debug] [MainThread]: Command `dbt init` succeeded at 01:45:43.954434 after 203.73 seconds
+[0m01:45:43.958545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a5c3a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063567b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a3fb570>]}
+[0m01:45:43.960141 [debug] [MainThread]: Flushing usage events
+[0m01:45:44.729842 [debug] [MainThread]: An error was encountered while trying to flush usage events
