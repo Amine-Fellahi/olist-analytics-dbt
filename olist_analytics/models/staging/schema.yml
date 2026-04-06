@@ -12,3 +12,94 @@ sources:
       - name: order_reviews_clean
       - name: products
       - name: sellers
+
+models:
+  - name: stg_customers
+    description: "Cleaned customer data with location info."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer."
+        tests:
+          - unique
+          - not_null
+      - name: customer_city
+        description: "City of the customer."
+      - name: customer_state
+        description: "State of the customer."
+
+  - name: stg_orders
+    description: "Cleaned orders with key timestamps."
+    columns:
+      - name: order_id
+        description: "Unique identifier for the order."
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Identifier of the customer who placed the order."
+      - name: ordered_at
+        description: "Timestamp when the order was placed."
+      - name: delivered_at
+        description: "Timestamp when the order was delivered."
+      - name: estimated_delivery_at
+        description: "Estimated delivery timestamp at time of purchase."
+
+  - name: stg_order_items
+    description: "One row per item in an order, with price and freight value."
+    columns:
+      - name: order_id
+        description: "Identifier of the order this item belongs to."
+        tests:
+          - not_null
+      - name: seller_id
+        description: "Identifier of the seller fulfilling this item."
+      - name: price
+        description: "Price of the item."
+      - name: freight_value
+        description: "Freight cost for this item."
+
+  - name: stg_order_payments
+    description: "One row per payment entry for an order."
+    columns:
+      - name: order_id
+        description: "Identifier of the order this payment belongs to."
+        tests:
+          - not_null
+      - name: payment_type
+        description: "Type of payment used (e.g. credit card, boleto)."
+      - name: payment_value
+        description: "Amount paid in this payment entry."
+
+  - name: stg_order_reviews
+    description: "Customer reviews linked to orders."
+    columns:
+      - name: order_id
+        description: "Identifier of the order being reviewed."
+        tests:
+          - not_null
+      - name: review_score
+        description: "Review score given by the customer (1-5)."
+
+  - name: stg_sellers
+    description: "Cleaned seller data with location info."
+    columns:
+      - name: seller_id
+        description: "Unique identifier for the seller."
+        tests:
+          - unique
+          - not_null
+      - name: seller_city
+        description: "City where the seller is located."
+      - name: seller_state
+        description: "State where the seller is located."
+
+  - name: stg_products
+    description: "Cleaned product data with category info."
+    columns:
+      - name: product_id
+        description: "Unique identifier for the product."
+        tests:
+          - unique
+          - not_null
+      - name: product_category_name
+        description: "Category name of the product."
